@@ -2,6 +2,7 @@ package br.uni.unibet.UniBet.service;
 
 import br.uni.unibet.UniBet.model.Time;
 import br.uni.unibet.UniBet.model.dao.TimeDAO;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ public class TimeService {
     @Autowired
     TimeDAO tDao;
 
-    public Time verificaSalvamento(Time time) throws Exception {
+    public Time verificaSalvamento(@NotNull Time time) throws Exception {
 
         if (time.getNome().isEmpty() || time.getNome().isBlank()){
             throw new Exception("nome do time não pode ser vazio");

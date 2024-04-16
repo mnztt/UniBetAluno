@@ -47,7 +47,7 @@ public class UniBetApplication  implements CommandLineRunner {
 		Jogo j1 = new Jogo(1, LocalDateTime.of(2024,04,25,20,30)
 				,0.8,0.2,0.1, time, time1,
 				0, 0,
-				ETipoResultado.AGAUARDANDO);
+				ETipoResultado.AGUARDANDO);
 		Jogo j2 = new Jogo(2, LocalDateTime.now()
 				,0.5,0.7,0.3, time, time1,
 				0, 0,

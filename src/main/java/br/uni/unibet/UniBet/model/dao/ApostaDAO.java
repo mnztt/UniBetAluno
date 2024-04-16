@@ -9,10 +9,10 @@ import java.util.List;
 
 public interface ApostaDAO extends JpaRepository<Aposta, Integer> {
 
-    public List<Aposta> findByJogadorAndJogoResultado(int id, ETipoResultado tipo);
+    public List<Aposta> findByJogadorIdAndJogoResultado(int id, ETipoResultado tipo);
 
     public Integer countByJogadorId(Integer id);
-
-    @Query("select count(a) from Aposta a where a.jogador.id = :id")
+    @Query("select a from Aposta a where a.jogador.id = :id")
     public Integer quantidadeApostasJogador(Integer id);
+
 }

@@ -78,7 +78,7 @@ public class ApostaService {
 
     public List<ApostaViewDTO> getApostaUsuario(Integer id) {
         
-          List<Aposta>  lista = adao.findByJogadorAndJogoResultado(id, ETipoResultado.AGAUARDANDO);
+          List<Aposta>  lista = adao.findByJogadorIdAndJogoResultado(id, ETipoResultado.AGUARDANDO);
         List<ApostaViewDTO> listaDTO = new ArrayList<>();
         for (Aposta a : lista ) {
             ApostaViewDTO ap = new ApostaViewDTO();
